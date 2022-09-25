@@ -23,6 +23,7 @@ body {
 .download {
     width: calc(50% - 225px);
     padding: 0px 75px 0px 150px;
+    cursor: pointer;
 }
 
 .slider {
@@ -132,6 +133,14 @@ body {
     background-color: #ED4C5C;
     border: 1.5px solid #ED4C5C;
     border-radius: 6px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #FFFFFF;
+    color: #ED4C5C;
+    border: 1.5px solid #ED4C5C;
+    transition: 0.2s;
 }
 
 /* Footer */
