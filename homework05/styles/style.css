@@ -73,13 +73,13 @@ table td:last-child {
     cursor: pointer;
 }
 
-.checkbox-file {
+.checkbox-container {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.checkbox-file input {
+.checkbox-container input {
     width: 18px;
     height: 18px;
 
@@ -87,7 +87,7 @@ table td:last-child {
     padding: 0px;
 }
 
-.checkbox-file label {
+.checkbox-container label {
     margin-left: 10px;
 }
 
