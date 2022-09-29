@@ -69,10 +69,26 @@ table td:last-child {
     border: 1px solid #555;
 }
 
-.bg-none {
-    background-color: #2F2F2F;
-    border: 1px solid #737373;
-    border-radius: 5px;
+.rect-box img {
+    cursor: pointer;
+}
+
+.checkbox-file {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.checkbox-file input {
+    width: 18px;
+    height: 18px;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+.checkbox-file label {
+    margin-left: 10px;
 }
 
 .circle {
@@ -88,6 +104,8 @@ table td:last-child {
 }
 
 .name-sort, .option {
+    cursor: pointer;
+
     display: flex;
     flex-direction: row;
     align-items: center;
