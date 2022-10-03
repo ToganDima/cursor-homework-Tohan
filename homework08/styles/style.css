@@ -1,0 +1,94 @@
+
+@font-face {
+    font-family: homeworkFont;
+    src: url(./Helvetica.ttf);
+    font-weight: 700;
+ }
+
+ /*  Without using Grid
+.box {
+    margin: 10px;
+    padding: 17px 24px;
+    display: inline;
+    line-height: 70px;
+    background-color: gray;
+}
+
+.box:nth-child(4n)::after {
+    content: "\00000a";
+    white-space: pre;
+}
+ */
+
+ .container {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px;
+    gap: 25px;
+ }
+
+ .box {
+    width: 50px;
+    height: 50px;
+
+    background-color: gray;
+ }
+
+.box:nth-child(4n + 3) {
+    background-color: red !important;
+}
+
+.box:nth-last-child(-n + 4) {
+    background-color: blue;
+}
+
+/* Part 2 */
+.button-box {
+    display: flex;
+    justify-content: center;
+}
+
+#create-btn {
+    position: relative;
+    width: 500px;
+    height: 90px;
+    margin: 100px auto;
+
+    font-family: homeworkFont;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #FFFFFF;
+    background-color: #44D3A8;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+}
+
+#create-btn:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+
+#create-btn::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 6px);  /* 2 lines: 4px + margin: 8px = 12px together */
+    left: -244px;          /* line width: 200px + margin to button: 44px */
+    width: 200px;
+    height: 8px;
+    border-top: 2px solid #C4C4C4;
+    border-bottom: 2px solid #C4C4C4;
+}
+
+#create-btn::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 6px);   /* 2 lines: 4px + margin: 8px = 12px together */
+    right: -244px;          /* line width: 200px + margin to button: 44px */
+    width: 200px;
+    height: 8px;
+    border-top: 2px solid #C4C4C4;
+    border-bottom: 2px solid #C4C4C4;
+}
+
