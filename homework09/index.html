@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Homework #9</title>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="header-left">
+            <div class="logo-box">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_60_1)">
+                        <path class="logo-background" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.488968 15.452C0.488968 10.4485 4.54514 6.39229 9.54868 6.39229C14.5522 6.39229 18.6084 10.4485 18.6084 15.452C18.6084 20.4556 14.5522 24.5117 9.54868 24.5117C4.54514 24.5117 0.488968 20.4556 0.488968 15.452Z" />
+                        <path class="logo-white" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.9485 23.8516L9.55663 21.7764V18.6334L12.3885 16.576L15.6931 17.3177L16.3516 21.4332L12.9485 23.8516Z" />
+                        <path class="logo-white" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M18.5498 14.4359L15.6928 17.3179L12.3881 16.5761L11.3065 13.2468L13.3488 10.1039L17.3669 10.8752L18.5498 14.4359Z" />
+                        <path class="logo-white" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.47071 23.9756L9.53906 21.7764V18.6335L6.70703 16.576L3.40236 17.3178L2.90321 21.6097L6.47071 23.9756Z" />
+                        <path class="logo-white" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.550865 14.3895L3.40254 17.3179L6.70721 16.5761L7.78906 13.2468L5.74667 10.1039L1.73895 10.8567L0.550865 14.3895Z" />
+                        <path class="logo-white" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M7.78854 6.56391L5.74654 10.1041L7.78893 13.2471H11.3072L13.3496 10.1041L11.3072 6.56391H7.78854Z" />
+                        <path class="logo-blue"
+                            d="M1.29064 10.6634C0.649391 11.7653 0.222336 13.0062 0.0666962 14.3291C0.066124 14.3333 0.0657425 14.3375 0.0651703 14.3417C0.0228271 14.706 0.000320435 15.0764 0.000320435 15.452C0.000320435 17.9319 0.950943 20.1939 2.50658 21.8931C2.53137 21.9278 2.56055 21.9595 2.59374 21.9868C3.60426 23.0616 4.86005 23.9033 6.2713 24.4205C6.29667 24.432 6.32299 24.4415 6.34988 24.4484C7.35029 24.8051 8.4268 25 9.54832 25C10.7992 25 11.9945 24.7578 13.0903 24.3185C13.12 24.3095 13.1486 24.2977 13.1763 24.2832C14.5236 23.7278 15.7169 22.8725 16.6728 21.8012C16.7041 21.7735 16.732 21.7424 16.7554 21.7081C18.2128 20.0312 19.0963 17.8429 19.0963 15.452C19.0963 15.0936 19.0757 14.7398 19.037 14.3915C19.0366 14.3871 19.036 14.3829 19.0355 14.3787C18.9645 13.7466 18.8316 13.1332 18.6429 12.5444L23.772 7.41539C23.9627 7.22466 23.9627 6.91547 23.772 6.72474C23.6766 6.62937 23.5517 6.58169 23.4268 6.58169C23.3018 6.58169 23.1769 6.62937 23.0815 6.72474L18.2601 11.5459C18.1259 11.2478 17.9767 10.9575 17.8136 10.6766C17.7987 10.643 17.7799 10.6115 17.7579 10.5824C16.5475 8.54969 14.6043 7.00245 12.2953 6.30741L15.735 2.86789C15.9255 2.67715 15.9255 2.36797 15.735 2.17724C15.6396 2.08187 15.5145 2.03419 15.3896 2.03419C15.2646 2.03419 15.1397 2.08187 15.0443 2.17724L11.178 6.04382C10.6481 5.95226 10.1037 5.90401 9.54832 5.90401C6.07027 5.90401 3.02099 7.77378 1.35168 10.5606C1.32726 10.5923 1.30666 10.6266 1.29064 10.6634ZM5.51542 10.6441L7.25263 13.3175L6.3289 16.1604L4.13335 16.6534L3.5621 16.7816L1.06596 14.2183C1.21759 13.1708 1.55939 12.184 2.0553 11.294L5.51542 10.6441ZM11.8438 13.3175L13.5803 10.6455L17.0511 11.3115C17.5483 12.2089 17.889 13.2046 18.0366 14.2612L15.5372 16.7824L12.7675 16.1604L12.152 14.2658L11.8438 13.3175ZM16.6555 20.2385L16.2151 17.4856L18.1182 15.5659C18.0955 17.2937 17.5598 18.9001 16.6555 20.2385ZM10.9527 13.735L11.8152 16.3895L9.55728 18.0298L7.29936 16.3893L8.16187 13.735H10.9527ZM0.977837 15.5275L2.89091 17.4921L2.55273 20.3997C1.57426 19.0201 0.993668 17.3401 0.977837 15.5275ZM3.41543 21.4336L3.84763 17.7183L4.8982 17.4826L6.59898 17.1007L9.05107 18.8822V21.5256L6.401 23.4249C5.26785 22.9759 4.25294 22.2919 3.41543 21.4336ZM7.56582 23.7915L9.56892 22.3558L11.802 23.7221C11.0835 23.9182 10.328 24.0234 9.54832 24.0234C8.86606 24.0234 8.2023 23.9429 7.56582 23.7915ZM12.9871 23.3025L10.0456 21.5027V18.8822L11.7751 17.6256L12.4975 17.1007L15.2639 17.7217L15.8323 21.2746C15.0379 22.1313 14.071 22.8258 12.9871 23.3025ZM16.2959 10.1723L13.6613 9.66644L12.3195 7.34062C13.9047 7.88364 15.2818 8.87909 16.2959 10.1723ZM10.9977 7.00378L12.7775 10.0887L11.0425 12.7584H8.0541L6.31918 10.0887L8.09854 7.00397C8.57004 6.92329 9.05431 6.88076 9.54832 6.88076C10.0423 6.88057 10.5264 6.9231 10.9977 7.00378ZM6.77694 7.34062L5.43588 9.66549L2.81137 10.1585C3.82436 8.87203 5.19727 7.88174 6.77694 7.34062Z" />
+                        <path class="logo-blue"
+                            d="M18.2753 7.41569L24.8569 0.833807C25.0477 0.643072 25.0477 0.333891 24.8569 0.143156C24.7616 0.0479794 24.6367 0.000295639 24.5117 0.000295639C24.3868 0.000295639 24.2619 0.0479794 24.1665 0.143347L17.5846 6.72503C17.3941 6.91577 17.3941 7.22495 17.5846 7.41569C17.7753 7.60623 18.0845 7.60623 18.2753 7.41569Z" />
+                        <g filter="url(#filter0_d_60_1)">
+                            <path class="logo-blue"
+                                d="M16.8877 1.51318C17.0161 1.51318 17.1419 1.46092 17.2327 1.37013C17.3235 1.27934 17.376 1.15346 17.376 1.02452C17.376 0.896156 17.3237 0.770653 17.2327 0.679672C17.1419 0.58831 17.0161 0.53624 16.8877 0.53624C16.7591 0.53624 16.6333 0.58831 16.5425 0.679672C16.4517 0.770462 16.3994 0.896156 16.3994 1.02452C16.3994 1.15346 16.4515 1.27934 16.5425 1.37013C16.6333 1.46092 16.7591 1.51318 16.8877 1.51318Z" />
+                            <path
+                                d="M16.8787 1.0327C16.8785 1.03248 16.8783 1.03227 16.8781 1.03207C16.8772 1.03094 16.8769 1.03023 16.8768 1.02999C16.8766 1.02966 16.876 1.02802 16.876 1.02452C16.876 1.02144 16.8765 1.02012 16.8766 1.01997L16.8766 1.01996L16.8766 1.01995C16.8767 1.01981 16.8771 1.01862 16.8792 1.01658C16.8792 1.01655 16.8792 1.01652 16.8793 1.01648C16.8797 1.01609 16.88 1.01575 16.8804 1.01547C16.8818 1.01424 16.8826 1.0139 16.8827 1.01385L16.8828 1.01385L16.8828 1.01385C16.8829 1.01378 16.8843 1.01318 16.8877 1.01318C16.8909 1.01318 16.8922 1.01375 16.8924 1.01382L16.8924 1.01382L16.8924 1.01383C16.8925 1.01388 16.8934 1.01422 16.8948 1.01547C16.8951 1.01569 16.8954 1.01593 16.8956 1.01621M16.8787 1.0327L16.8959 1.01648M16.8787 1.0327C16.8788 1.03279 16.8789 1.03287 16.8789 1.03295C16.879 1.03303 16.8791 1.03311 16.8792 1.03319C16.8792 1.03322 16.8793 1.03325 16.8793 1.03328C16.8811 1.03482 16.8822 1.03533 16.8826 1.03548C16.883 1.03566 16.8845 1.03624 16.8877 1.03624C16.8907 1.03624 16.8921 1.03569 16.8926 1.03551C16.8929 1.03535 16.8941 1.03483 16.8959 1.03328C16.8959 1.03325 16.896 1.03322 16.896 1.03319C16.8962 1.03303 16.8964 1.03286 16.8965 1.03268C16.8967 1.03247 16.8969 1.03227 16.8971 1.03208L16.8787 1.0327ZM16.8956 1.01621C16.8957 1.0163 16.8958 1.01639 16.8959 1.01648C16.8959 1.0165 16.896 1.01652 16.896 1.01654L16.8959 1.01648M16.8956 1.01621C16.8957 1.0163 16.8958 1.01639 16.8959 1.01648M16.8956 1.01621L16.8959 1.01648M16.5425 0.679672C16.4517 0.770462 16.3994 0.896156 16.3994 1.02452C16.3994 1.15346 16.4515 1.27934 16.5425 1.37013V0.679672ZM16.5425 0.679672C16.6333 0.58831 16.7591 0.53624 16.8877 0.53624C17.0161 0.53624 17.1419 0.58831 17.2327 0.679672H16.5425ZM16.8792 1.03323C16.8791 1.03314 16.879 1.03305 16.8789 1.03297L16.8792 1.03323ZM16.896 1.03323L16.8961 1.03313C16.8961 1.03316 16.8961 1.03319 16.896 1.03323ZM16.8781 1.03211L16.8782 1.03223C16.8781 1.03219 16.8781 1.03215 16.8781 1.03211Z" stroke="black" />
+                        </g>
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_60_1" x="12.3994" y="0.536133" width="8.97656" height="8.97705"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                result="hardAlpha" />
+                            <feOffset dy="4" />
+                            <feGaussianBlur stdDeviation="2" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_60_1" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_60_1" result="shape" />
+                        </filter>
+                        <clipPath id="clip0_60_1">
+                            <rect width="25" height="25" fill="white" transform="translate(25 25) rotate(-180)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <h1>Sport</h1>
+            </div>
+            <div class="header-about">
+                <h2>Get a personalized football experience tailored just for you</h2>
+                <p>Achieve super-fan status by getting tailored updates and up-to-the-minute information on your team.</p>
+            </div>
+            <div class="download-buttons">
+                <button class="download-apple">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="31" viewBox="0 0 26 31" fill="none">
+                        <path class="download-apple-path" fill-rule="evenodd" clip-rule="evenodd" d="M19.006 0.078125C17.4564 0.143073 15.5787 1.10966 14.4675 2.40919C13.4685 3.56327 12.5965 5.40512 12.8316 7.17116C14.5617 7.3064 16.3246 6.29357 17.4015 4.99338C18.4763 3.69085 19.204 1.88324 19.006 0.078125ZM18.5678 30.813C20.6674 30.7739 21.9972 28.9093 23.2828 27.0332C24.6915 24.9782 25.3135 22.9857 25.4063 22.6886C25.4115 22.672 25.415 22.6608 25.4169 22.655C25.416 22.6546 25.4134 22.6535 25.4092 22.6518C25.2072 22.5698 21.321 20.9921 21.2824 16.4316C21.2444 12.6656 24.2521 10.7921 24.5833 10.5859C24.5948 10.5787 24.6031 10.5735 24.6079 10.5704C22.7975 7.92677 19.9785 7.56428 18.9741 7.52288C17.507 7.37474 16.0836 7.93473 14.9206 8.39227C14.1816 8.68304 13.5477 8.93243 13.0745 8.93243C12.5479 8.93243 11.8967 8.67434 11.1658 8.38469C10.2091 8.00559 9.1161 7.57244 7.98768 7.59316C5.37398 7.63223 2.96205 9.11208 1.61601 11.451C-1.10216 16.1607 0.918947 23.1394 3.56701 26.9581C4.86319 28.8258 6.40446 30.9278 8.43142 30.8521C9.33644 30.8158 9.98053 30.542 10.6466 30.2587C11.4165 29.9314 12.2157 29.5916 13.4811 29.5916C14.6864 29.5916 15.4486 29.9209 16.1818 30.2377C16.883 30.5406 17.5577 30.8321 18.5678 30.813Z"/>
+                    </svg>
+                    <p>Download on the <br><span>App Store</span></p>
+                </button>
+                <button class="download-google">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="31" viewBox="12 8 31 31" fill="none">
+                        <path
+                            d="M12.6719 36.178V10.8249C12.6719 9.94019 13.1836 9.17544 13.9261 8.8125L28.5569 23.4972L13.9203 38.1875C13.1809 37.8235 12.6719 37.0605 12.6719 36.178Z"
+                            fill="#00D6FF" />
+                        <path d="M33.198 28.1558L17.2002 37.4261L29.8173 24.7627L33.198 28.1558Z" fill="#F93647" />
+                        <path
+                            d="M38.1708 21.7243C38.7029 22.1331 39.0461 22.7772 39.0461 23.5017C39.0461 24.2153 38.7133 24.8508 38.1948 25.2603L34.7967 27.2295L31.0781 23.4974L34.7942 19.7676L38.1708 21.7243Z"
+                            fill="#FFCE00" />
+                        <path d="M17.21 9.57764L33.1959 18.841L29.8177 22.2316L17.21 9.57764Z" fill="#00F076" />
+                    </svg>
+                    <p>Download on <br> <span>Google</span> <span>play</span></p>
+                </button>
+            </div>
+        </div>
+        <div class="header-right"> 
+            <img src="./images/Frame.png" alt="" 
+            srcset="./images/Frame.png 1440w, ./images/Frame-1200.png 1200w ./images/Frame-992.png 992w">
+        </div>
+    </div>
+
+    <div class="experience">
+        <div class="exp-anonce">
+            <div class="anonce-box-top">
+                <div class="anonce-date">
+                    <p>Sat, 12:35pm</p>
+                    <p>Arsenal v Chelsea</p>
+                    <p>Friendly Match</p>
+                </div>
+                <div class="anonce-label">
+                    <img src="./images/arsenal-fc.png" alt="">
+                    <img src="./images/chelsea-fc.png" alt="">
+                </div>
+                <div class="anonce-subscr">
+                    <p>Turn on all match notifications</p>
+                    <label class="toggler-wrapper subscr-check">
+                        <input type="checkbox">
+                        <div class="toggler-slider">
+                            <div class="toggler-knob"></div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="anonce-box-middle">
+                <img src="./images/youtube.png" alt=""
+                srcset="./images/youtube.png 1440w, ./images/youtube-720.png 992w">
+                <div class="video-operations">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="logo-white" d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" />
+                    </svg>
+                    <p>00:28</p>
+                    <svg class="scroll-svg" width="172" height="10" viewBox="0 0 172 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="3" width="172" height="4" rx="2" fill="#BDBDBD" />
+                        <rect y="3" width="127" height="4" rx="2" fill="#00ADEE" />
+                        <circle cx="126" cy="5" r="5" fill="white" />
+                    </svg>
+                    <p>00:42</p>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="logo-white" 
+                            d="M17.4997 2.5H2.49967C1.58301 2.5 0.833008 3.25 0.833008 4.16667V15.8333C0.833008 16.75 1.58301 17.5 2.49967 17.5H17.4997C18.4163 17.5 19.1663 16.75 19.1663 15.8333V4.16667C19.1663 3.25 18.4163 2.5 17.4997 2.5ZM17.4997 13.3333H2.49967V4.16667H17.4997V13.3333Z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="exp-desc">
+            <div class="exp-content">
+                <h3>WHAT IT DOES</h3>
+                <h2>An Enhanced Football Experience</h2>
+                <p>The Guardian Live Scores app is your go to app for live scores and watching Premier League goals… Get in
+                    there, what a result!</p>
+                <p>As well as videos of all the goals, you can watch match highlights, check out the latest scores and results
+                    and stay bang-up-to-date with the big football stories from The Guardian publication.</p>
+                <button>Learn more</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="user-interface">
+        <div class="interface-info">
+            <h3>GET STARTED</h3>
+            <h2>User-friendly Interface</h2>
+            <p>
+                The in-game goal clips from every Premier League match are available to Guardian TV customers with a
+                Guardian
+                subscription.
+            </p>
+            <p>
+                So, if you’re not a subscriber, now’s the time to make that savvy call. If that’s a step too far for you,
+                you
+                can still watch loads of firecracker Premier League action as long as you sign in with a free Guardian iD.
+            </p>
+            <button>Learn more</button>
+        </div>
+        <div class="phone-notify">
+            <div class="phone-notify-content">
+                <img class="phone-img-720" src="./images/iphone-720.png" alt="">
+                <img class="phone-img" src="./images/iphone.png" alt="">
+                <div class="notify-count">
+                    <svg width="38" height="46" viewBox="0 0 38 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="notify-icon"
+                            d="M19 46C21.6125 46 23.75 43.8769 23.75 41.2821H14.25C14.25 43.8769 16.3638 46 19 46ZM33.25 31.8462V20.0513C33.25 12.8092 29.355 6.74667 22.5625 5.14256V3.53846C22.5625 1.58051 20.9713 0 19 0C17.0287 0 15.4375 1.58051 15.4375 3.53846V5.14256C8.62125 6.74667 4.75 12.7856 4.75 20.0513V31.8462L0 36.5641V38.9231H38V36.5641L33.25 31.8462Z" />
+                    </svg>
+                    <div class="n-counter">7</div>
+                </div>
+                <div class="notify-phone-cr">
+                    <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="notify-icon"
+                            d="M32.0342 6.46271L15.3675 6.44604C13.5342 6.44604 12.0342 7.94604 12.0342 9.77938V14.7794H15.3675V13.1127H32.0342V36.446H15.3675V34.7794H12.0342V39.7794C12.0342 41.6127 13.5342 43.1127 15.3675 43.1127H32.0342C33.8675 43.1127 35.3675 41.6127 35.3675 39.7794V9.77938C35.3675 7.94604 33.8675 6.46271 32.0342 6.46271ZM18.7008 29.7794H22.0342V18.1127H10.3675V21.446H16.3508L7.03418 30.7627L9.38418 33.1127L18.7008 23.796V29.7794Z" />
+                    </svg>
+                </div>
+                <div class="phone-circle1">
+                    <div class="phone-circle2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="features-options">
+        <h2>Features That Will Tailor Your Experience</h2>
+        
+        <div class="features-boxes">
+            
+            <div class="features-box">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="logo-white"
+                        d="M35.0003 5H5.00033C3.15033 5 1.66699 6.48333 1.66699 8.33333V28.3333C1.66699 30.1667 3.15033 31.6667 5.00033 31.6667H13.3337V35H26.667V31.6667H35.0003C36.8337 31.6667 38.317 30.1667 38.317 28.3333L38.3337 8.33333C38.3337 6.48333 36.8337 5 35.0003 5ZM35.0003 28.3333H5.00033V8.33333H35.0003V28.3333ZM26.667 18.3333L15.0003 25V11.6667L26.667 18.3333Z" />
+                </svg>
+                <p>• Notifications for your teams, including in-game goal clips and Premier League match highlights for Sky
+                    TV
+                    subscribers with Guardian.</p>
+            </div>
+            <div class="features-box">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="logo-white"
+                        d="M12.6338 6.80008L10.2505 4.41675C6.25046 7.46675 3.61712 12.1667 3.38379 17.5001H6.71712C6.96712 13.0834 9.23379 9.21675 12.6338 6.80008ZM33.2838 17.5001H36.6171C36.3671 12.1667 33.7338 7.46675 29.7505 4.41675L27.3838 6.80008C30.7505 9.21675 33.0338 13.0834 33.2838 17.5001ZM30.0005 18.3334C30.0005 13.2167 27.2671 8.93341 22.5005 7.80008V6.66675C22.5005 5.28341 21.3838 4.16675 20.0005 4.16675C18.6171 4.16675 17.5005 5.28341 17.5005 6.66675V7.80008C12.7171 8.93341 10.0005 13.2001 10.0005 18.3334V26.6667L6.66712 30.0001V31.6667H33.3338V30.0001L30.0005 26.6667V18.3334ZM20.0005 36.6667C20.2338 36.6667 20.4505 36.6501 20.6671 36.6001C21.7505 36.3667 22.6338 35.6334 23.0671 34.6334C23.2338 34.2334 23.3171 33.8001 23.3171 33.3334H16.6505C16.6671 35.1667 18.1505 36.6667 20.0005 36.6667Z" />
+                </svg>
+                <p>• Notifications for your teams, including in-game goal clips and Premier League match highlights for Sky
+                    TV subscribers with Guardian.</p>
+            </div>
+            <div class="features-box">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="logo-white"
+                        d="M31.6667 5H8.33333C6.48333 5 5 6.5 5 8.33333V31.6667C5 33.5 6.48333 35 8.33333 35H31.6667C33.5 35 35 33.5 35 31.6667V8.33333C35 6.5 33.5 5 31.6667 5ZM18.3333 25H15.8333V21.6667H12.5V25H10V15H12.5V19.1667H15.8333V15H18.3333V25ZM21.6667 15H28.3333C29.25 15 30 15.75 30 16.6667V23.3333C30 24.25 29.25 25 28.3333 25H21.6667V15ZM24.1667 22.5H27.5V17.5H24.1667V22.5Z" />
+                </svg>
+                <p>• Brand new video section including dedicated areas for your chosen team, trending video, Premier League,
+                    Football league and other major leagues</p>
+            </div>
+            <div class="features-box">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="logo-white"
+                        d="M23.9997 10.0001L23.333 6.66675H8.33301V35.0001H11.6663V23.3334H20.9997L21.6663 26.6667H33.333V10.0001H23.9997Z" />
+                </svg>
+                <p>• Match pages showing live scores, commentary, team line-ups and enhanced match stats to keep you
+                    up-to-date on all the action</p>
+            </div>
+            <div class="features-box">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="logo-white"
+                        d="M4.21642 32.7499L6.44976 33.6833V18.6333L2.39976 28.3999C1.71643 30.0999 2.53309 32.0499 4.21642 32.7499ZM36.7164 26.5833L28.4498 6.63325C27.9331 5.38325 26.7164 4.61659 25.4331 4.58325C24.9998 4.58325 24.5498 4.64992 24.1164 4.83325L11.8331 9.91658C10.5831 10.4333 9.81642 11.6333 9.78309 12.9166C9.76642 13.3666 9.84976 13.8166 10.0331 14.2499L18.2998 34.1999C18.8164 35.4666 20.0498 36.2333 21.3498 36.2499C21.7831 36.2499 22.2164 36.1666 22.6331 35.9999L34.8998 30.9166C36.5998 30.2166 37.4164 28.2666 36.7164 26.5833ZM13.1331 14.5833C12.2164 14.5833 11.4664 13.8333 11.4664 12.9166C11.4664 11.9999 12.2164 11.2499 13.1331 11.2499C14.0498 11.2499 14.7998 11.9999 14.7998 12.9166C14.7998 13.8333 14.0498 14.5833 13.1331 14.5833ZM9.79976 32.9166C9.79976 34.7499 11.2998 36.2499 13.1331 36.2499H15.5498L9.79976 22.3499V32.9166Z" />
+                </svg>
+                <p>• The new picture in picture video mode means you can watch goals, manager interviews and more whilst
+                    using other areas of the app – so you don’t need to miss any of the action</p>
+            </div>
+            <div class="features-box">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="logo-white"
+                        d="M31.6667 5H8.33333C6.5 5 5 6.5 5 8.33333V31.6667C5 33.5 6.5 35 8.33333 35H31.6667C33.5 35 35 33.5 35 31.6667V8.33333C35 6.5 33.5 5 31.6667 5ZM15 28.3333H11.6667V16.6667H15V28.3333ZM21.6667 28.3333H18.3333V11.6667H21.6667V28.3333ZM28.3333 28.3333H25V21.6667H28.3333V28.3333Z" />
+                </svg>
+                <p>• Live updated league tables including all the domestic, European and major leagues and tournaments</p>
+            </div>
+            <div class="features-box">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="logo-white"
+                        d="M30 1.68341L13.3333 1.66675C11.5 1.66675 10 3.16675 10 5.00008V10.0001H13.3333V8.33342H30V31.6667H13.3333V30.0001H10V35.0001C10 36.8334 11.5 38.3334 13.3333 38.3334H30C31.8333 38.3334 33.3333 36.8334 33.3333 35.0001V5.00008C33.3333 3.16675 31.8333 1.68341 30 1.68341ZM16.6667 25.0001H20V13.3334H8.33333V16.6667H14.3167L5 25.9834L7.35 28.3334L16.6667 19.0167V25.0001Z" />
+                </svg>
+                <p>• The Guardian News Vidiprinter. Follow the goals as they go in with our new and improved Vidiprinter</p>
+            </div>
+            <div class="features-box">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="logo-white"
+                        d="M26.667 18.3333C29.4337 18.3333 31.6503 16.0999 31.6503 13.3333C31.6503 10.5666 29.4337 8.33325 26.667 8.33325C23.9003 8.33325 21.667 10.5666 21.667 13.3333C21.667 16.0999 23.9003 18.3333 26.667 18.3333ZM13.3337 18.3333C16.1003 18.3333 18.317 16.0999 18.317 13.3333C18.317 10.5666 16.1003 8.33325 13.3337 8.33325C10.567 8.33325 8.33366 10.5666 8.33366 13.3333C8.33366 16.0999 10.567 18.3333 13.3337 18.3333ZM13.3337 21.6666C9.45033 21.6666 1.66699 23.6166 1.66699 27.4999V31.6666H25.0003V27.4999C25.0003 23.6166 17.217 21.6666 13.3337 21.6666ZM26.667 21.6666C26.1837 21.6666 25.6337 21.6999 25.0503 21.7499C26.9837 23.1499 28.3337 25.0333 28.3337 27.4999V31.6666H38.3337V27.4999C38.3337 23.6166 30.5503 21.6666 26.667 21.6666Z" />
+                </svg>
+                <p>• Match reports, previews and a dedicated news section</p>
+            </div>
+            <div class="features-box">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="logo-white"
+                        d="M5 28.3333V31.6667H15V28.3333H5ZM5 8.33333V11.6667H21.6667V8.33333H5ZM21.6667 35V31.6667H35V28.3333H21.6667V25H18.3333V35H21.6667ZM11.6667 15V18.3333H5V21.6667H11.6667V25H15V15H11.6667ZM35 21.6667V18.3333H18.3333V21.6667H35ZM25 15H28.3333V11.6667H35V8.33333H28.3333V5H25V15Z" />
+                </svg>
+                <p>• And you can achieve super-fan status by personalising your home page with up-to-the-minute information
+                    on your team.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="feedbacks">
+    
+        <h2>What Our Users Say</h2>
+    
+        <div class="feedbacks-slider">
+    
+            <div class="slider-prev-btn">
+                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="slider-btn-bg" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6.6 0L8 1.4L3.4 6L8 10.6L6.6 12L0.6 6L6.6 0Z" />
+                </svg>
+            </div>
+            <div class="slider-next-btn">
+                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="slider-btn-bg" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1.4 0L0 1.4L4.6 6L0 10.6L1.4 12L7.4 6L1.4 0Z" />
+                </svg>
+            </div>
+
+            <div class="slider-boxes">
+    
+                <div class="feedback-box">
+                    <div class="feedback-content">
+                        <div class="feedback-user">
+                            <div class="user-info">
+                                <img src="./images/empty-foto.png" alt="">
+                                <h4>Sarah Udoma</h4>
+                            </div>
+                            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="twitter-bg"
+                                    d="M15 1.42062C14.4422 1.66154 13.8478 1.82123 13.2281 1.89877C13.8656 1.524 14.3522 0.935077 14.5809 0.225231C13.9866 0.574154 13.3303 0.820615 12.6309 0.958154C12.0666 0.366462 11.2622 0 10.3847 0C8.68219 0 7.31156 1.36062 7.31156 3.02862C7.31156 3.26862 7.33219 3.49938 7.38281 3.71908C4.82625 3.59631 2.56406 2.38985 1.04437 0.552C0.779062 1.00523 0.623438 1.524 0.623438 2.08246C0.623438 3.13108 1.17188 4.06062 1.98937 4.59877C1.49531 4.58954 1.01063 4.44831 0.6 4.22585C0.6 4.23508 0.6 4.24708 0.6 4.25908C0.6 5.73046 1.66594 6.95262 3.06375 7.23415C2.81344 7.30154 2.54063 7.33385 2.2575 7.33385C2.06063 7.33385 1.86187 7.32277 1.67531 7.28215C2.07375 8.48123 3.20438 9.36277 4.54875 9.39138C3.5025 10.1972 2.17406 10.6828 0.735938 10.6828C0.48375 10.6828 0.241875 10.6717 0 10.6412C1.36219 11.5062 2.97656 12 4.7175 12C10.3763 12 13.47 7.38462 13.47 3.384C13.47 3.25015 13.4653 3.12092 13.4587 2.99262C14.0691 2.56615 14.5819 2.03354 15 1.42062Z" />
+                            </svg>
+                        </div>
+                        <div class="feedback-comment">
+                            <p>I use this app every day and it's a great way to keep up to date with what's going on in
+                                football.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="feedback-box">
+                    <div class="feedback-content">
+                        <div class="feedback-user">
+                            <div class="user-info">
+                                <img src="./images/user-foto1.png" alt="">
+                                <h4>Noah Jackson</h4>
+                            </div>
+                            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="twitter-bg"
+                                    d="M15 1.42062C14.4422 1.66154 13.8478 1.82123 13.2281 1.89877C13.8656 1.524 14.3522 0.935077 14.5809 0.225231C13.9866 0.574154 13.3303 0.820615 12.6309 0.958154C12.0666 0.366462 11.2622 0 10.3847 0C8.68219 0 7.31156 1.36062 7.31156 3.02862C7.31156 3.26862 7.33219 3.49938 7.38281 3.71908C4.82625 3.59631 2.56406 2.38985 1.04437 0.552C0.779062 1.00523 0.623438 1.524 0.623438 2.08246C0.623438 3.13108 1.17188 4.06062 1.98937 4.59877C1.49531 4.58954 1.01063 4.44831 0.6 4.22585C0.6 4.23508 0.6 4.24708 0.6 4.25908C0.6 5.73046 1.66594 6.95262 3.06375 7.23415C2.81344 7.30154 2.54063 7.33385 2.2575 7.33385C2.06063 7.33385 1.86187 7.32277 1.67531 7.28215C2.07375 8.48123 3.20438 9.36277 4.54875 9.39138C3.5025 10.1972 2.17406 10.6828 0.735938 10.6828C0.48375 10.6828 0.241875 10.6717 0 10.6412C1.36219 11.5062 2.97656 12 4.7175 12C10.3763 12 13.47 7.38462 13.47 3.384C13.47 3.25015 13.4653 3.12092 13.4587 2.99262C14.0691 2.56615 14.5819 2.03354 15 1.42062Z" />
+                            </svg>
+                        </div>
+                        <div class="feedback-comment">
+                            <p>I use this app every day and it's a great way to keep up to date with what's going on in
+                                football. It's a
+                                shame it won't rotate into landscape mode like its main competitor</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="feedback-box">
+                    <div class="feedback-content">
+                        <div class="feedback-user">
+                            <div class="user-info">
+                                <img src="./images/empty-foto.png" alt="">
+                                <h4>Darren Wilson</h4>
+                            </div>
+                            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="twitter-bg"
+                                    d="M15 1.42062C14.4422 1.66154 13.8478 1.82123 13.2281 1.89877C13.8656 1.524 14.3522 0.935077 14.5809 0.225231C13.9866 0.574154 13.3303 0.820615 12.6309 0.958154C12.0666 0.366462 11.2622 0 10.3847 0C8.68219 0 7.31156 1.36062 7.31156 3.02862C7.31156 3.26862 7.33219 3.49938 7.38281 3.71908C4.82625 3.59631 2.56406 2.38985 1.04437 0.552C0.779062 1.00523 0.623438 1.524 0.623438 2.08246C0.623438 3.13108 1.17188 4.06062 1.98937 4.59877C1.49531 4.58954 1.01063 4.44831 0.6 4.22585C0.6 4.23508 0.6 4.24708 0.6 4.25908C0.6 5.73046 1.66594 6.95262 3.06375 7.23415C2.81344 7.30154 2.54063 7.33385 2.2575 7.33385C2.06063 7.33385 1.86187 7.32277 1.67531 7.28215C2.07375 8.48123 3.20438 9.36277 4.54875 9.39138C3.5025 10.1972 2.17406 10.6828 0.735938 10.6828C0.48375 10.6828 0.241875 10.6717 0 10.6412C1.36219 11.5062 2.97656 12 4.7175 12C10.3763 12 13.47 7.38462 13.47 3.384C13.47 3.25015 13.4653 3.12092 13.4587 2.99262C14.0691 2.56615 14.5819 2.03354 15 1.42062Z" />
+                            </svg>
+                        </div>
+                        <div class="feedback-comment">
+                            <p>Good for scores and commentary but the team lineups have stopped working. </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="feedback-box">
+                    <div class="feedback-content">
+                        <div class="feedback-user">
+                            <div class="user-info">
+                                <img src="./images/user-foto2.png" alt="">
+                                <h4>Michael Akinuli</h4>
+                            </div>
+                            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="twitter-bg"
+                                    d="M15 1.42062C14.4422 1.66154 13.8478 1.82123 13.2281 1.89877C13.8656 1.524 14.3522 0.935077 14.5809 0.225231C13.9866 0.574154 13.3303 0.820615 12.6309 0.958154C12.0666 0.366462 11.2622 0 10.3847 0C8.68219 0 7.31156 1.36062 7.31156 3.02862C7.31156 3.26862 7.33219 3.49938 7.38281 3.71908C4.82625 3.59631 2.56406 2.38985 1.04437 0.552C0.779062 1.00523 0.623438 1.524 0.623438 2.08246C0.623438 3.13108 1.17188 4.06062 1.98937 4.59877C1.49531 4.58954 1.01063 4.44831 0.6 4.22585C0.6 4.23508 0.6 4.24708 0.6 4.25908C0.6 5.73046 1.66594 6.95262 3.06375 7.23415C2.81344 7.30154 2.54063 7.33385 2.2575 7.33385C2.06063 7.33385 1.86187 7.32277 1.67531 7.28215C2.07375 8.48123 3.20438 9.36277 4.54875 9.39138C3.5025 10.1972 2.17406 10.6828 0.735938 10.6828C0.48375 10.6828 0.241875 10.6717 0 10.6412C1.36219 11.5062 2.97656 12 4.7175 12C10.3763 12 13.47 7.38462 13.47 3.384C13.47 3.25015 13.4653 3.12092 13.4587 2.99262C14.0691 2.56615 14.5819 2.03354 15 1.42062Z" />
+                            </svg>
+                        </div>
+                        <div class="feedback-comment">
+                            <p>Good for watching the goals and great for highlights instead of waiting till 10:30 before you
+                                can watch highlights on March of the day also no need of sky go</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="feedback-box">
+                    <div class="feedback-content">
+                        <div class="feedback-user">
+                            <div class="user-info">
+                                <img src="./images/user-foto3.png" alt="">
+                                <h4>Sarah Udoma</h4>
+                            </div>
+                            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="twitter-bg"
+                                    d="M15 1.42062C14.4422 1.66154 13.8478 1.82123 13.2281 1.89877C13.8656 1.524 14.3522 0.935077 14.5809 0.225231C13.9866 0.574154 13.3303 0.820615 12.6309 0.958154C12.0666 0.366462 11.2622 0 10.3847 0C8.68219 0 7.31156 1.36062 7.31156 3.02862C7.31156 3.26862 7.33219 3.49938 7.38281 3.71908C4.82625 3.59631 2.56406 2.38985 1.04437 0.552C0.779062 1.00523 0.623438 1.524 0.623438 2.08246C0.623438 3.13108 1.17188 4.06062 1.98937 4.59877C1.49531 4.58954 1.01063 4.44831 0.6 4.22585C0.6 4.23508 0.6 4.24708 0.6 4.25908C0.6 5.73046 1.66594 6.95262 3.06375 7.23415C2.81344 7.30154 2.54063 7.33385 2.2575 7.33385C2.06063 7.33385 1.86187 7.32277 1.67531 7.28215C2.07375 8.48123 3.20438 9.36277 4.54875 9.39138C3.5025 10.1972 2.17406 10.6828 0.735938 10.6828C0.48375 10.6828 0.241875 10.6717 0 10.6412C1.36219 11.5062 2.97656 12 4.7175 12C10.3763 12 13.47 7.38462 13.47 3.384C13.47 3.25015 13.4653 3.12092 13.4587 2.99262C14.0691 2.56615 14.5819 2.03354 15 1.42062Z" />
+                            </svg>
+                        </div>
+                        <div class="feedback-comment">
+                            <p>This app has videos for other premier league teams who play and it also gives me nofications
+                                when my favourite team plays</p>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="slider-circles">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <div class="partners">
+        <h2>We have been featured in</h2>
+        <div class="partners-logo">
+            <img src="./images/partner1.png" alt="">    
+            <img src="./images/partner2.png" alt="">    
+            <img src="./images/partner3.png" alt="">    
+            <img src="./images/partner4.png" alt="">    
+            <img src="./images/partner5.png" alt="">    
+            <img src="./images/partner6.png" alt="">    
+        </div>
+    </div>
+
+    <div class="download-bottom">
+        <div class="download-bot-img">
+            <img src="./images/Frame2.png" alt=""
+            srcset="./images/Frame2.png 1440w, ./images/Frame3.png 992w">
+            <!-- <img src="./images/Frame2.png" alt="">
+            <img src="./images/Frame3.png" alt=""> -->
+        </div>
+        <div class="download-desc-content">
+            <div class="download-bot-desc">
+                <h2>Get Up Close With Your Team</h2>
+                <p class="download-footer-desc">If you’re interested in the scores of more than one team (it’s OK, we won’t tell
+                    your mates you support two clubs!), you can choose the scores and competitions that matter to you using the
+                    ‘My Scores’ section. So, make sure you’re a top-flight football fan by downloading the Football Score Centre
+                    now. It’s got all this:</p>
+                <div class="download-buttons">
+                    <button class="download-apple">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="31" viewBox="0 0 26 31" fill="none">
+                            <path class="download-apple-path" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.006 0.078125C17.4564 0.143073 15.5787 1.10966 14.4675 2.40919C13.4685 3.56327 12.5965 5.40512 12.8316 7.17116C14.5617 7.3064 16.3246 6.29357 17.4015 4.99338C18.4763 3.69085 19.204 1.88324 19.006 0.078125ZM18.5678 30.813C20.6674 30.7739 21.9972 28.9093 23.2828 27.0332C24.6915 24.9782 25.3135 22.9857 25.4063 22.6886C25.4115 22.672 25.415 22.6608 25.4169 22.655C25.416 22.6546 25.4134 22.6535 25.4092 22.6518C25.2072 22.5698 21.321 20.9921 21.2824 16.4316C21.2444 12.6656 24.2521 10.7921 24.5833 10.5859C24.5948 10.5787 24.6031 10.5735 24.6079 10.5704C22.7975 7.92677 19.9785 7.56428 18.9741 7.52288C17.507 7.37474 16.0836 7.93473 14.9206 8.39227C14.1816 8.68304 13.5477 8.93243 13.0745 8.93243C12.5479 8.93243 11.8967 8.67434 11.1658 8.38469C10.2091 8.00559 9.1161 7.57244 7.98768 7.59316C5.37398 7.63223 2.96205 9.11208 1.61601 11.451C-1.10216 16.1607 0.918947 23.1394 3.56701 26.9581C4.86319 28.8258 6.40446 30.9278 8.43142 30.8521C9.33644 30.8158 9.98053 30.542 10.6466 30.2587C11.4165 29.9314 12.2157 29.5916 13.4811 29.5916C14.6864 29.5916 15.4486 29.9209 16.1818 30.2377C16.883 30.5406 17.5577 30.8321 18.5678 30.813Z" />
+                        </svg>
+                        <p>Download on the <br><span>App Store</span></p>
+                    </button>
+                    <button class="download-google">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31"
+                            height="31" viewBox="12 8 31 31" fill="none">
+                            <path
+                                d="M12.6719 36.178V10.8249C12.6719 9.94019 13.1836 9.17544 13.9261 8.8125L28.5569 23.4972L13.9203 38.1875C13.1809 37.8235 12.6719 37.0605 12.6719 36.178Z"
+                                fill="#00D6FF" />
+                            <path d="M33.198 28.1558L17.2002 37.4261L29.8173 24.7627L33.198 28.1558Z" fill="#F93647" />
+                            <path
+                                d="M38.1708 21.7243C38.7029 22.1331 39.0461 22.7772 39.0461 23.5017C39.0461 24.2153 38.7133 24.8508 38.1948 25.2603L34.7967 27.2295L31.0781 23.4974L34.7942 19.7676L38.1708 21.7243Z"
+                                fill="#FFCE00" />
+                            <path d="M17.21 9.57764L33.1959 18.841L29.8177 22.2316L17.21 9.57764Z" fill="#00F076" />
+                        </svg>
+                        <p>Download on <br> <span>Google</span> <span>play</span></p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+    
+        <div class="footer-content">
+    
+            <div class="footer-logo">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_59_0)">
+                        <path class="logo-white" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.488968 15.452C0.488968 10.4485 4.54514 6.39229 9.54868 6.39229C14.5522 6.39229 18.6084 10.4485 18.6084 15.452C18.6084 20.4556 14.5522 24.5117 9.54868 24.5117C4.54514 24.5117 0.488968 20.4556 0.488968 15.452Z" />
+                        <path class="logo-background" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.9485 23.8514L9.55663 21.7762V18.6333L12.3885 16.5758L15.6931 17.3176L16.3516 21.4331L12.9485 23.8514Z" />
+                        <path class="logo-background" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M18.5498 14.4357L15.6928 17.3177L12.3881 16.5759L11.3065 13.2466L13.3488 10.1037L17.3669 10.875L18.5498 14.4357Z" />
+                        <path class="logo-background" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.47071 23.9758L9.53906 21.7766V18.6337L6.70703 16.5762L3.40236 17.318L2.90321 21.6099L6.47071 23.9758Z" />
+                        <path class="logo-background" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.550865 14.3893L3.40254 17.3177L6.70721 16.5759L7.78906 13.2466L5.74667 10.1037L1.73895 10.8565L0.550865 14.3893Z" />
+                        <path class="logo-background" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M7.78854 6.56379L5.74654 10.104L7.78893 13.2469H11.3072L13.3496 10.104L11.3072 6.56379H7.78854Z" />
+                        <path class="logo-white"
+                            d="M1.29064 10.6634C0.649391 11.7653 0.222336 13.0062 0.0666962 14.3291C0.066124 14.3333 0.0657425 14.3375 0.0651703 14.3417C0.0228271 14.706 0.000320435 15.0764 0.000320435 15.452C0.000320435 17.9319 0.950943 20.1939 2.50658 21.8931C2.53137 21.9278 2.56055 21.9595 2.59374 21.9868C3.60426 23.0616 4.86005 23.9033 6.2713 24.4205C6.29667 24.432 6.32299 24.4415 6.34988 24.4484C7.35029 24.8051 8.4268 25 9.54832 25C10.7992 25 11.9945 24.7578 13.0903 24.3185C13.12 24.3095 13.1486 24.2977 13.1763 24.2832C14.5236 23.7278 15.7169 22.8725 16.6728 21.8012C16.7041 21.7735 16.732 21.7424 16.7554 21.7081C18.2128 20.0312 19.0963 17.8429 19.0963 15.452C19.0963 15.0936 19.0757 14.7398 19.037 14.3915C19.0366 14.3871 19.036 14.3829 19.0355 14.3787C18.9645 13.7466 18.8316 13.1332 18.6429 12.5444L23.772 7.41539C23.9627 7.22466 23.9627 6.91547 23.772 6.72474C23.6766 6.62937 23.5517 6.58169 23.4268 6.58169C23.3018 6.58169 23.1769 6.62937 23.0815 6.72474L18.2601 11.5459C18.1259 11.2478 17.9767 10.9575 17.8136 10.6766C17.7987 10.643 17.7799 10.6115 17.7579 10.5824C16.5475 8.54969 14.6043 7.00245 12.2953 6.30741L15.735 2.86789C15.9255 2.67715 15.9255 2.36797 15.735 2.17724C15.6396 2.08187 15.5145 2.03419 15.3896 2.03419C15.2646 2.03419 15.1397 2.08187 15.0443 2.17724L11.178 6.04382C10.6481 5.95226 10.1037 5.90401 9.54832 5.90401C6.07027 5.90401 3.02099 7.77378 1.35168 10.5606C1.32726 10.5923 1.30666 10.6266 1.29064 10.6634ZM5.51542 10.6441L7.25263 13.3175L6.3289 16.1604L4.13335 16.6534L3.5621 16.7816L1.06596 14.2183C1.21759 13.1708 1.55939 12.184 2.0553 11.294L5.51542 10.6441ZM11.8438 13.3175L13.5803 10.6455L17.0511 11.3115C17.5483 12.2089 17.889 13.2046 18.0366 14.2612L15.5372 16.7824L12.7675 16.1604L12.152 14.2658L11.8438 13.3175ZM16.6555 20.2385L16.2151 17.4856L18.1182 15.5659C18.0955 17.2937 17.5598 18.9001 16.6555 20.2385ZM10.9527 13.735L11.8152 16.3895L9.55728 18.0298L7.29936 16.3893L8.16187 13.735H10.9527ZM0.977837 15.5275L2.89091 17.4921L2.55273 20.3997C1.57426 19.0201 0.993668 17.3401 0.977837 15.5275ZM3.41543 21.4336L3.84763 17.7183L4.8982 17.4826L6.59898 17.1007L9.05107 18.8822V21.5256L6.401 23.4249C5.26785 22.9759 4.25294 22.2919 3.41543 21.4336ZM7.56582 23.7915L9.56892 22.3558L11.802 23.7221C11.0835 23.9182 10.328 24.0234 9.54832 24.0234C8.86606 24.0234 8.2023 23.9429 7.56582 23.7915ZM12.9871 23.3025L10.0456 21.5027V18.8822L11.7751 17.6256L12.4975 17.1007L15.2639 17.7217L15.8323 21.2746C15.0379 22.1313 14.071 22.8258 12.9871 23.3025ZM16.2959 10.1723L13.6613 9.66644L12.3195 7.34062C13.9047 7.88364 15.2818 8.87909 16.2959 10.1723ZM10.9977 7.00378L12.7775 10.0887L11.0425 12.7584H8.0541L6.31918 10.0887L8.09854 7.00397C8.57004 6.92329 9.05431 6.88076 9.54832 6.88076C10.0423 6.88057 10.5264 6.9231 10.9977 7.00378ZM6.77694 7.34062L5.43588 9.66549L2.81137 10.1585C3.82436 8.87203 5.19727 7.88174 6.77694 7.34062Z" />
+                        <path class="logo-white"
+                            d="M18.2753 7.41556L24.8569 0.833685C25.0477 0.64295 25.0477 0.333769 24.8569 0.143034C24.7616 0.0478573 24.6367 0.000173569 24.5117 0.000173569C24.3868 0.000173569 24.2619 0.0478573 24.1665 0.143225L17.5846 6.72491C17.3941 6.91565 17.3941 7.22483 17.5846 7.41556C17.7753 7.60611 18.0845 7.60611 18.2753 7.41556Z" />
+                        <path class="logo-white"
+                            d="M16.8877 1.51306C17.0161 1.51306 17.1419 1.4608 17.2327 1.37001C17.3235 1.27922 17.376 1.15334 17.376 1.0244C17.376 0.896034 17.3237 0.770531 17.2327 0.67955C17.1419 0.588188 17.0161 0.536118 16.8877 0.536118C16.7591 0.536118 16.6333 0.588188 16.5425 0.67955C16.4517 0.77034 16.3994 0.896034 16.3994 1.0244C16.3994 1.15334 16.4515 1.27922 16.5425 1.37001C16.6333 1.4608 16.7591 1.51306 16.8877 1.51306Z" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_59_0">
+                            <rect width="25" height="25" fill="white" transform="translate(25 25) rotate(-180)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <h1>Sport</h1>
+            </div>
+            <div class="footer-links">
+                <a href="">Download</a>
+                <a href="">Support</a>
+                <a href="">Developers</a>
+                <a href="">Privacy</a>
+            </div>
+            <div class="footer-socmedia">
+                <a href="">
+                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="logo-background"
+                            d="M15.3144 1.42111C14.7684 1.65702 14.1808 1.81561 13.5645 1.88753C14.1942 1.52109 14.677 0.942173 14.9043 0.250834C14.3153 0.590668 13.6637 0.83679 12.9692 0.968776C12.4137 0.394577 11.6223 0.0359497 10.7457 0.0359497C9.0645 0.0359497 7.70045 1.35864 7.70045 2.99139C7.70045 3.22344 7.72705 3.44922 7.77931 3.66565C5.24807 3.54224 3.00276 2.36484 1.50123 0.576594C1.23872 1.01331 1.08871 1.52032 1.08871 2.06251C1.08871 3.0875 1.62618 3.99372 2.44341 4.5227C1.94344 4.50708 1.47463 4.37501 1.06296 4.1524V4.1899C1.06296 5.62269 2.11293 6.81726 3.50668 7.08913C3.2512 7.15632 2.98242 7.19305 2.70429 7.19305C2.5082 7.19305 2.3176 7.17512 2.13164 7.13993C2.5191 8.31493 3.64416 9.16958 4.97775 9.19309C3.93482 9.98681 2.62148 10.4587 1.19418 10.4587C0.948056 10.4587 0.705882 10.4446 0.466797 10.4174C1.81601 11.2564 3.41606 11.7462 5.13711 11.7462C10.7402 11.7462 13.8043 7.23999 13.8043 3.33371L13.7957 2.95088C14.3894 2.53519 14.9059 2.01488 15.3144 1.42111Z" />
+                    </svg>
+                </a>
+                <a href="">
+                    <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="logo-background"
+                            d="M5.02147 2.6054H6.63242V0.225708H4.7387V0.23429C2.44414 0.315558 1.97387 1.60538 1.93242 2.96008H1.9277V4.14838H0.365234V6.47882H1.9277V12.7257H4.28242V6.47882H6.21132L6.58393 4.14838H4.28319V3.43044C4.28319 2.97261 4.58784 2.6054 5.02147 2.6054Z" />
+                    </svg>
+                </a>
+                <a href="">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="logo-background"
+                            d="M11.8136 0.467224H3.18478C1.68556 0.467224 0.466797 1.68676 0.466797 3.18521V11.8149C0.466797 13.3141 1.68634 14.5329 3.18478 14.5329H11.8145C13.3137 14.5329 14.5325 13.3134 14.5325 11.8149V3.18521C14.5324 1.68676 13.3129 0.467224 11.8136 0.467224ZM12.6699 2.0399L12.9777 2.03913V4.37351L10.6262 4.38132L10.6184 2.04694L12.6699 2.0399ZM7.49964 5.14689C9.45042 5.14689 9.85273 6.97813 9.85273 7.50075C9.85273 8.79684 8.7965 9.85307 7.49964 9.85307C6.20201 9.85307 5.14655 8.79684 5.14655 7.50075C5.14569 6.97813 5.54886 5.14689 7.49964 5.14689ZM12.991 11.6446C12.991 12.3876 12.3871 12.9922 11.6426 12.9922H3.33007C2.58629 12.9922 1.98163 12.3883 1.98163 11.6446V5.93443H3.93473C3.75349 6.3805 3.65111 6.98989 3.65111 7.50084C3.65111 9.62119 5.37611 11.347 7.49723 11.347C9.61836 11.347 11.3425 9.62119 11.3425 7.50084C11.3425 6.98989 11.2401 6.3805 11.0597 5.93443H12.9893V11.6446H12.991Z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
