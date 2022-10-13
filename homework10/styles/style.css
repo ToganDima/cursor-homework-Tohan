@@ -1,0 +1,97 @@
+.main {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newton {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+
+    padding-bottom: 50px;
+
+    width: 550px;
+    height: 300px;
+    border: 10px solid gray;
+    border-bottom: 40px solid gray;
+}
+
+.newton::before {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: -50px;
+    width: 50px;
+    height: 40px;
+    background: gray;
+}
+
+.newton::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    right: -50px;
+    width: 50px;
+    height: 40px;
+    background: gray;
+}
+
+.ball {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-color: blue;
+    border-radius: 50%;
+    transform-origin: 50% -240px;
+    z-index: -1;
+}
+
+.ball::after {
+    content: '';
+    position: absolute;
+    bottom: 70px;
+    left: 35px;
+    height: 235px;
+    width: 2px;
+    background: gray;
+}
+
+.first-ball {
+    animation: ball-first 1s infinite alternate 1s cubic-bezier(0.02, 0.1, 0.4, 1);
+}
+
+.last-ball {
+    animation: ball-last 1s infinite alternate cubic-bezier(0.02, 0.1, 0.4, 1);
+}
+
+@keyframes ball-first {
+
+    0%, 50% {
+        background-color: blue;
+        transform: rotate(0);
+    }
+
+    100% {
+        background-color: darkcyan;
+        transform: rotate(60deg);
+    }
+}
+
+@keyframes ball-last {
+
+    0%, 50% {
+        background-color: blue;
+        transform: rotate(0);
+    }
+
+    100% {
+        background-color: darkcyan;
+        transform: rotate(-60deg);
+    }
+}
