@@ -95,3 +95,196 @@
         transform: rotate(-60deg);
     }
 }
+
+.wrapper {
+    width: 500px;
+    height: 500px;
+    margin: 100px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url('../images/nebo_0.jpg');
+}
+
+.swords-box {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+.sword {
+    position: relative;
+
+    width: 250px;
+    height: 20px;
+
+    border-radius: 25px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: gray;
+}
+
+.sword:nth-child(1) {
+    box-shadow: white 2px 0px 10px 7px;
+}
+
+.sword:nth-child(2) {
+    box-shadow: rgb(149, 143, 197) 2px 0px 10px 7px;
+}
+
+.sword:nth-child(3) {
+    box-shadow: rgb(211, 67, 67) 2px 0px 10px 7px;
+}
+
+.s-white::after,
+.s-blue::after {
+    content: '';
+    position: absolute;
+
+    top: 0px;
+    left: 10px;
+
+    width: 50px;
+    height: 20px;
+    background-color: black;
+}
+
+.s-red::after {
+    content: '';
+    position: absolute;
+
+    bottom: 0px;
+    right: 10px;
+
+    width: 50px;
+    height: 20px;
+    background-color: black;
+}
+
+.s-white {
+    position: absolute;
+    bottom: 150px;
+    left: calc(50% - 125px);
+    transform: rotate(-15deg);
+    z-index: 1;
+}
+
+.s-red {
+    position: absolute;
+    bottom: 150px;
+    right: calc(50% - 125px);
+    transform: rotate(15deg);
+}
+
+.s-blue {
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 125px);
+}
+
+.s-white {
+    animation: s-first 5s infinite alternate-reverse 1s ease-in-out;
+}
+
+.s-red {
+    animation: s-second 5s infinite alternate-reverse 1s ease-in-out;
+}
+
+.s-blue {
+    animation: s-third 8s infinite normal linear;
+}
+
+@keyframes s-first {
+
+    0% {
+        bottom: 150px;
+        left: calc(50% - 125px);
+        transform: rotate(-15deg);
+    }
+
+    25% {
+        bottom: 350px;
+        left: 0px;
+    }
+    
+    50%, 75% {
+        transform: rotate(720deg);
+    }
+
+    100% {
+        left: calc(50% - 125px);
+    }
+}
+
+@keyframes s-second {
+
+    0% {
+        bottom: 150px;
+        right: calc(50% - 125px);
+        transform: rotate(15deg);
+    }
+
+    25% {
+        bottom: 350px;
+        right: 0px;
+    }
+    
+    50%, 75% {
+        transform: rotate(-720deg);
+    }
+
+    100% {
+        right: calc(50% - 125px);
+    }
+}
+
+@keyframes s-third {
+
+    0% {
+        top: 0px;
+        left: calc(50% - 125px);
+    }
+
+    10% {
+        top: 120px;
+        left: 250px;
+    }
+
+    25% {
+        top: 240px;
+        left: 0px;
+    }
+
+    40% {
+        top: 360px;
+        left: 250px;
+    }
+
+    50% {
+        top: 480px;
+        left: calc(50% - 125px);
+    }
+
+    60% {
+        top: 360px;
+        left: 0px;
+    }
+
+    75% {
+        top: 240px;
+        left: 250px;
+    }
+
+    90% {
+        top: 120px;
+        left: 0px;
+    }
+
+    100% {
+        top: 0px;
+        left: calc(50% - 125px);
+    }
+
+}
