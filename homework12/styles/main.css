@@ -41,7 +41,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .navbar .buy-now-btn {
-    width: 130px;
+    width: 100px;
   }
 }
 @media screen and (min-width: 1400px) {
