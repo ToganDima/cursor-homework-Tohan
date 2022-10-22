@@ -320,6 +320,21 @@ body {
   color: #111B47;
   border: 1px solid #111B47;
 }
+@media screen and (max-width: 467px) {
+  .footer .center-wrapper .footer-logo {
+    flex-direction: column;
+    justify-content: space-around !important;
+  }
+  .footer .center-wrapper .footer-logo p {
+    order: 3;
+  }
+  .footer .center-wrapper .footer-logo h1 {
+    order: 1;
+  }
+  .footer .center-wrapper .footer-logo button {
+    order: 3;
+  }
+}
 .footer .center-wrapper .footer-links {
   height: 76px;
 }
@@ -349,4 +364,9 @@ body {
 .footer .center-wrapper .footer-links .footer-socmedia img:hover {
   transition: all 0.2s;
   transform: scale(1.3);
+}
+@media screen and (max-width: 467px) {
+  .footer .center-wrapper .footer-links {
+    justify-content: space-around !important;
+  }
 }/*# sourceMappingURL=main.css.map */
