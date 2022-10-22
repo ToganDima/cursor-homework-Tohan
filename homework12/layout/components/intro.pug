@@ -1,0 +1,37 @@
+.intro-section
+    .container.center-wrapper
+        .card.border-0 
+            .row.g-0
+                .col-md-6.d-flex.align-items-center
+                    .card-body.p-0
+                        .intro-content
+                            h2 Light, Fast & Powerful
+                            p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                            p mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+                            .sub-intro-wrapper.d-flex.flex-row
+                                .goes-here-box
+                                    img(src="./images/Icon.png", alt="")
+                                    h3 Title Goes Here
+                                    p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.  
+                                .goes-here-box
+                                    img(src="./images/Icon.png", alt="")
+                                    h3 Title Goes Here
+                                    p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.  
+                .col-md-6
+                    img(src="./images/desc1.png", alt="Intro1").img-fluid 
+        mixin card-info(title, path, addBtn)
+            .card.border-0 
+                .row.g-0.flex-wrap-reverse
+                    .col-md-6
+                        img(src= path, alt="Intro").img-fluid
+                    .col-md-6.d-flex.align-items-center.p-2
+                        .card-body
+                            .intro-content
+                                h2= title
+                                p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                                p mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+                                if addBtn 
+                                    button Purchase Now
+        +card-info('Light, Fast & Powerful', './images/intro1.png', false)        
+        +card-info('Light, Fast & Powerful', './images/intro2.png', false)        
+        +card-info('Light, Fast & Powerful', './images/intro3.png', true)        
